@@ -144,8 +144,11 @@ public class ModCollinsHeadFinder2 extends CollinsHeadFinder {
     // defaultRule = defaultLeftRule; // Don't exception, take leftmost if no rule defined for a certain parent category
     // NH 20220711 add rule for TBAR
 	nonTerminalInfo.put("TBAR", new String[][] {{"left", "NP", "S", "SBAR"}}); 
+	nonTerminalInfo.put("QUP", new String[][] {{"left", "CC", "RB"}}); 
+	nonTerminalInfo.put("VBRD", new String[][] {{"left", "VB", "VBN", "VBG", "VBD", "VBZ"}}); 
+	nonTerminalInfo.put("JJRD", new String[][] {{"left", "JJ", "JJR", "JJS", "VBN"}}); 
+	defaultRule = defaultLeftRule;
   }
-
   private static final long serialVersionUID = -5870387458902637256L;
 
 }
